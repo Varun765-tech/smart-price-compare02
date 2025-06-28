@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart PriceCompare</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add Particles.js library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+
+  <!-- Particles background layer -->
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>🛍️ Smart PriceCompare</h1>
+    <p>Find the best deal across all major shopping platforms</p>
+  </header>
+
+  <main>
+    <section class="search-section">
+      <input type="text" id="productInput" placeholder="Enter product name..." />
+      <button onclick="comparePrices()">Compare 🔍</button>
+    </section>
+
+    <section class="results">
+      <h2 id="productTitle">Search a product to compare prices</h2>
+      <table id="price-table">
+        <thead>
+          <tr>
+            <th>Shopping Site</th>
+            <th>Price (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Dynamic rows will appear here -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart PriceCompare. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <!-- Particle background initialization -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 80, density: { enable: true, value_area: 800 } },
+        color: { value: "#6a1b9a" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4, random: true },
+        size: { value: 4, random: true },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#6a1b9a",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: false }
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 0.5 } }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+</html>
